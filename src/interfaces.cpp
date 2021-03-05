@@ -2126,6 +2126,8 @@ std::string getProfile(RESPONSE_CALLBACK_ARGS)
     }
     else
     {
+        writeLog(0, token, LOG_LEVEL_ERROR);
+        writeLog(0, gAccessToken, LOG_LEVEL_ERROR);
         if(token != gAccessToken)
         {
             *status_code = 403;
